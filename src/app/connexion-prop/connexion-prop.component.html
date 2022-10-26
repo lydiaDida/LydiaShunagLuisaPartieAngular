@@ -1,29 +1,27 @@
-
 <!----------------------------------NavBar----------------------------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">RESERVATION HEBERGEMENETS</a>
-      <a class="navbar-brand" href="#"  routerLink="/inscreptionProp">Inscpretion propriétaire</a>
+      <a class="navbar-brand" href="#"  routerLink="/inscreption">Inscpretion propriétaire</a>
       <a class="navbar-brand" href="#"  routerLink="/inscreption">Inscpretion Locataire</a>  
-      <a class="navbar-brand" href="#"  routerLink="/connexionProp">Connexion proprietaire</a>  
+      <a class="navbar-brand" href="#"  routerLink="/connexion">Connexion locataire</a>  
       <div class="collapse navbar-collapse" id="navbarColor01">
       </div>
     </div>
   </nav>
   
   
-
 <div class="container">
     <h1>Connexion</h1>
     <p></p>
     
     <div class="row-sm-4">
-      <!--Formulaire de connexion de proprietaire-------------------------------------------->
 <form style="text-align: center" #userForm="ngForm" > 
+
        <div class="col-sm-4">
         <div class="form-outline mb-4">
             <input type="email" id="form2Example1" class="form-control" ngModel name="email"/>
-            <label class="form-label" for="form2Example1">Email de locataire</label>
+            <label class="form-label" for="form2Example1">Email de proptiétaire</label>
           </div>
         
           <!-- Password input -->
@@ -60,6 +58,7 @@
       
             </div>
         </div>
+  
 </form>
 
 </div> 

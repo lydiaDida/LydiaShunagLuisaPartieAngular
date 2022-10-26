@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Admin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a routerLink="propos" class="nav-link active" href="#">Hebergements
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+  <!-- <li class="nav-item">
+            <a class="nav-link"  routerLink="">Nos hebergements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reserver</a>
+          </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="hebergement">Vous etes locataire?</a>
+              <a class="dropdown-item" href="#">Vous etes Propréitaire?</a>
+  
+            </div>
+          </li>
+          <li class="nav-item">
+            <a routerLink="connexion" class="nav-link" >Admin</a>
+          </li>
+         
+          <li class="nav-item dropdown" *ngIf=" !authService.isAdmin() ">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" *ngIf=" !authService.isAdmin() ">Tableau de bord</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="hebergement">Mes reservations</a>
+              <a class="dropdown-item" href="#">Mes hebergements</a>
+              <a class="dropdown-item" href="#">Deconnexion</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Deconnexion<</a>
+            </div>
+          </li>
+           -->
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parametre</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="">Gerer les hebergements</a>
+              <a class="dropdown-item" routerLink="">Gerer les proppriétaires</a>
+              <a class="dropdown-item" routerLink="">Gerer leslocataires</a>
+  
+            </div>
+          </li>
+        </ul>
+      
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+        </form>
+      </div>
+    </div>
+   
+  </nav>
+  <div class="container">
+    <h3>MONTREAL</h3>
+  </div>
+  
+  

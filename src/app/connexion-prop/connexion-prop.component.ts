@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthentificationService } from '../authentification.service';
 
 @Component({
-  selector: 'app-connexion',
-  templateUrl: './connexion.component.html',
-  styleUrls: ['./connexion.component.css']
+  selector: 'app-connexion-prop',
+  templateUrl: './connexion-prop.component.html',
+  styleUrls: ['./connexion-prop.component.css']
 })
-export class ConnexionComponent implements OnInit {
+export class ConnexionPropComponent implements OnInit {
 
   constructor(private authentificationservice: AuthentificationService, private router:Router) { }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthentificationService } from '../authentification.service';
 import { HebergementService } from '../services/hebergement.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { HebergementService } from '../services/hebergement.service';
 })
 export class HomeComponent implements OnInit {
 public hebergements:any;
-  constructor( private service: HebergementService) { 
+  constructor( private service: HebergementService, public authService:AuthentificationService) { 
       
   }
 
