@@ -64,11 +64,11 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4" *ngFor="let b of hebergements._embedded.propreties">
+    <div class="col-md-4" *ngFor="let b of hebergements._embedded.hebergements">
         <div class="card" >
-            <img class="card-img-top" src="{{b.photos}}" alt="Card image cap">
+            <img class="card-img-top" src="{{b.repertoireDePhoto}}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{b.nom}}</h5>
+              <h5 class="card-title">{{b.adresse}}</h5>
               <p class="card-text">{{b.desciption | slice:0:20}} ...</p>
               <p class="card-text"><span class="text-muted font-weight-bold">{{b.prixCourant | number:'0.00'}}</span></p>
               <a  class="btn btn_primary" style="width: 100px;">Reserver!</a></div>

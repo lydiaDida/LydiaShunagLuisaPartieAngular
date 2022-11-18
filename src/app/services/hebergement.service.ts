@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HebergementService {
-  URL = "http://localhost:8088/categories"
-  host = "http://localhost:8088/propreties"
+  URL = "http://localhost:8088/typeDeHebergements"
+  host ="http://localhost:8088/hebergements"
 
 
   constructor(private http : HttpClient) { }
