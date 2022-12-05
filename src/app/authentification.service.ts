@@ -6,31 +6,57 @@ import { Injectable } from '@angular/core';
 export class AuthentificationService {
   //Pour tester 
   //Apres ces donnees on doit les recuperer de la bd ou on stocke les utilisateurs
-  private utilisateurs = [
+  private proprietaires = [
     {
-      nom:'admin',
+      nom:'proprietaire',
       pwd:'1234',
-      role:['ADMIN','USER']
+    
     },
     {
       nom:'user',
       pwd:'1234',
-      role:['USER']
+     
+    }
+  ]
+  private admins = [
+    {
+      nom:'admin',
+      pwd:'1234',
+    
+    },
+    {
+      nom:'ADMIN',
+      pwd:'1234',
+     
+    }
+  ]
+  private locataires = [
+    {
+      nom:'alain@gmail.com',
+      pwd:'1234',
+    
+    },
+    {
+      nom:'LOCATAIRE',
+      pwd:'1234',
+     
     }
   ]
   public isAuthentificated:any;
   public userAuthentificated:any;
 
   constructor() { }
-  public connexion(nom:string, pwd:string)
+
+  //Admin
+  public connexionAdmin(nom:string, pwd:string)
   {
-    let utilisateur;
-    this.utilisateurs.forEach(u => {
-      if(u.nom == nom && u.pwd == pwd)
-      {utilisateur = u}
+    let admin;
+    this.admins.forEach(a => {
+      if(a.nom == nom && a.pwd == pwd)
+      {admin = a}
       
     });
-    if(utilisateur)
+    if(admin)
     {
       this.isAuthentificated = true
       this.userAuthentificated = true
@@ -42,13 +68,56 @@ export class AuthentificationService {
 
     }
   }
-  public isAdmin()
-{
-  if(this.isAuthentificated)
+  //Locataire
+  public connexionLocataire(nom:string, pwd:string)
   {
-    return true;
+    let locataire;
+    this.locataires.forEach(l => {
+      if(l.nom == nom && l.pwd == pwd)
+      {locataire = l}
+      
+    });
+    if(locataire)
+    {
+      this.isAuthentificated = true
+      this.userAuthentificated = true
+    }
+    else
+    {
+      this.isAuthentificated = false
+      this.userAuthentificated = undefined
+
+    }
   }
-  return false;
-}
+
+  //Proprietaire
+  public connexionProprietaire(nom:string, pwd:string)
+  {
+    let proprietaire;
+    this.proprietaires.forEach(u => {
+      if(u.nom == nom && u.pwd == pwd)
+      {proprietaire = u}
+      
+    });
+    if(proprietaire)
+    {
+      this.isAuthentificated = true
+      this.userAuthentificated = true
+    }
+    else
+    {
+      this.isAuthentificated = false
+      this.userAuthentificated = undefined
+
+    }
+  }
+ // public isAdmin()
+//{
+ // if(this.isAuthentificated)
+ /// {
+   // return true;
+  //}
+ // return false;
+//}
 
 }

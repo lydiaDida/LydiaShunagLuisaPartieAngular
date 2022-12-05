@@ -1,35 +1,73 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">RESERVATION HEBERGEMENETS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a routerLink="propos" class="nav-link active" href="#">Gerer mes reservations
-              <span class="visually-hidden">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="propos" class="nav-link active" href="#">Gerer un hebergement
-              <span class="visually-hidden">(current)</span>
-            </a>
-          </li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Espace Locataire</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link active" href="#">Accueil
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>   
+      </ul>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a routerLink="/hebergementsLoc" class="nav-link active" href="#">Nos hebergements
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>   
+      </ul>
 
-           
-        </ul>
-      
-        <form class="d-flex">
-          <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
-        </form>
-      </div>
+          <a routerLink="propos" class="nav-link active" href="#">Deconnexion
+            <span class="visually-hidden">(current)</span>
+          </a>
+        
     </div>
-   
-  </nav>
-  <div class="container">
-    <h3>MONTREAL</h3>
   </div>
-  
-  
+ 
+</nav>
+<div class="container">
+  <div class="row">
+    <H3>Mes réservations</H3>
+    
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-primary add-new" routerLink="/hebergementsLoc"><i class="fa fa-plus"></i> Ajouter </button>
+      </div>
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+
+            <th scope="col">Date d'arrivée</th>
+            <th scope="col">Date de départ</th>
+            <th scope="col">Nombre d'adultes</th>
+            <th scope="col">Nombre d'enfants</th>
+            <th scope="col">Nombre de bébés</th>
+            <th scope="col">Nombre d'animaux</th>
+            <th scope="col">Etat de la reservation</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let b of reservations" >  
+           
+            <td>{{b.dateDeArrive}}</td>
+            <td>{{b.dateDeDepart}}</td>
+            <td>{{b.nombreEnfant}}</td>
+            <td>{{b.nombreAdulte}}</td>
+            <td>{{b.nombreBebe}}</td>
+            <td>{{b.nombreAnimauxAssistance}}</td>
+            <td>{{b.etatReservation}}</td>
+            <td>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>
+              <button (click)="deleteReservation(b.numeroDeReservation)" type="button" class="btn btn-danger" ><i class="far fa-trash-alt"></i>Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

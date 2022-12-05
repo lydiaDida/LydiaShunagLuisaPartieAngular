@@ -16,11 +16,12 @@ export class ConnexionPropComponent implements OnInit {
 
   onConnexion(dataForm:any)
   {
-    this.authentificationservice.connexion(dataForm.email, dataForm.pwd)
+    this.authentificationservice.connexionProprietaire(dataForm.email, dataForm.pwd)
     if(this.authentificationservice.isAuthentificated)
     {
-      this.router.navigateByUrl('')
+      this.router.navigateByUrl('/espaceProprietaire')
     }
   }
+  
 
 }

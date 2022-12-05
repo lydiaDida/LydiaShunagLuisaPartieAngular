@@ -16,10 +16,10 @@ export class ConnexionComponent implements OnInit {
 
   onConnexion(dataForm:any)
   {
-    this.authentificationservice.connexion(dataForm.email, dataForm.pwd)
+    this.authentificationservice.connexionLocataire(dataForm.email, dataForm.pwd)
     if(this.authentificationservice.isAuthentificated)
     {
-      this.router.navigateByUrl('')
+      this.router.navigateByUrl('/espaceLocataire')
     }
   }
 

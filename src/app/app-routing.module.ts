@@ -2,16 +2,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HebergementComponent } from './hebergement/hebergement.component';
-import { HomeComponent } from './accueil/home.component';
+import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
-import { ConnexionComponent } from './connexion/connexion.component';
+import { ConnexionComponent } from './connexion-locataire/connexion.component';
 import { ProposComponent } from './propos/propos.component';
-import { InscreptionComponent } from './inscreption/inscreption.component';
+import { InscreptionComponent } from './inscreption-locataire/inscreption.component';
 import { ConnexionPropComponent } from './connexion-prop/connexion-prop.component';
 import { InscreptionPropComponent } from './inscreption-prop/inscreption-prop.component';
-import { AdminComponent } from './admin/admin.component';
+import { AdminComponent } from './espace-admin/admin.component';
 import { EspaceLocataireComponent } from './espace-locataire/espace-locataire.component';
 import { EspaceProprietaireComponent } from './espace-proprietaire/espace-proprietaire.component';
+import { ReserverHebergementComponent } from './reserver-hebergement/reserver-hebergement.component';
+import { HeberpementsLocataireComponent } from './heberpements-locataire/heberpements-locataire.component';
 
 
 
@@ -23,12 +25,14 @@ const routes: Routes = [
 {path:'connexionProp', component:ConnexionPropComponent},
 
 {path:'menu', component:MenuComponent},
+{path:'hebergementsLoc', component: HeberpementsLocataireComponent},
 {path:'admin', component:AdminComponent},
 {path:'hebergement', component:HebergementComponent},
 {path:'inscreption', component:InscreptionComponent},
 {path:'espaceLocataire', component:EspaceLocataireComponent},
 {path:'espaceProprietaire', component:EspaceProprietaireComponent},
 {path:'inscreptionProp', component:InscreptionPropComponent},
+{path:'reserver', component: ReserverHebergementComponent},
 {path:'',redirectTo:'' ,pathMatch:'full'},
 ];
 

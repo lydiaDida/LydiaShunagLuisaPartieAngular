@@ -18,7 +18,7 @@ export class AppComponent  implements OnInit {
     }
   
     ngOnInit(): void {
-      this.service.getCategories().subscribe(data=>this.categories = data)
+      this.service.getHebergements().subscribe(data=>this.categories = data)
     }
 
    
