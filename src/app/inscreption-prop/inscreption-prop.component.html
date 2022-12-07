@@ -35,15 +35,16 @@
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                   S'inscrire</p>
-                <form class="mx-1 mx-md-4">
+                  <div class="alert aler-success" *ngIf="message">Le proprietaire est inscris avec success</div>
+                  <form class="mx-1 mx-md-4" #dataForm ="ngForm">
                   <div class="row">
                     <div class="col-md-6 mb-4">
-                      <input type="text" id="nom" class="form-control" />
-                      <label class="form-label" for="nomc">Nom de proprietaire</label>
+                      <input type="text" id="nom" class="form-control" ngModel name="nom"/>
+                      <label class="form-label" for="nom">Nom de proprietaire</label>
                      
                     </div>
                     <div class="col-md-6 mb-4">
-                      <input type="text" id="prenom" class="form-control" />
+                      <input type="text" id="prenom" class="form-control" ngModel name="prenom"/>
                         <label class="form-label" for="prenom">Prenom de proprietaire</label>
                       
                     </div>
@@ -53,33 +54,33 @@
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="email" id="email" class="form-control" />
-                      <label class="form-label" for="email">Email de proprietaire</label>
+                      <label class="form-label" for="email" ngModel name="email">Email de proprietaire</label>
                     </div>
                   </div>
                   <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
                           <input type="tel" id="tel" class="form-control form-control-lg" />
-                          <label class="form-label" for="tel">Telephone</label>
+                          <label class="form-label" for="tel" ngModel name="tel">Telephone</label>
                       </div>
                     </div>
                     
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="password" class="form-control" />
+                      <input type="password" id="password" class="form-control" ngModel name="password" />
                       <label class="form-label" for="password">Mot de passe</label>
                     </div>
                   </div>
 <h5>Adresse</h5>
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                      <input type="number" id="numRue" class="form-control" />
+                      <input type="number" id="numRue" class="form-control" ngModel name="numRue" />
                       <label class="form-label" for="numRue">Numero de RUE</label>
                      
                     </div>
                     <div class="col-md-6 mb-4">
-                      <input type="text" id="rue" class="form-control" />
+                      <input type="text" id="rue" class="form-control" ngModel name="rue" />
                       <label class="form-label" for="rue">Rue</label>
                       
                     </div>
@@ -87,12 +88,12 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       
-                      <input type="text" id="ville" class="form-control" />
+                      <input type="text" id="ville" class="form-control" ngModel name="ville"/>
                       <label class="form-label" for="ville">Ville</label>
                     </div>
                     <div class="col-md-6 mb-4">
                       
-                      <input type="text" id="province" class="form-control" />
+                      <input type="text" id="province" class="form-control" ngModel name="province"/>
                       <label class="form-label" for="province">Province</label>
                     </div>
                   </div>
@@ -100,17 +101,17 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       
-                      <input type="text" id="codePostal" class="form-control" />
+                      <input type="text" id="codePostal" class="form-control" ngModel name="codePostal" />
                       <label class="form-label" for="codePostal">Code Postal</label>
                     </div>
                     <div class="col-md-6 mb-4">
                       
-                      <input type="text" id="pays" class="form-control" />
+                      <input type="text" id="pays" class="form-control" ngModel name="pays" />
                       <label class="form-label" for="pays">Pays</label>
                     </div>
                   </div>
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" class="btn btn-primary btn-lg">S'inscrire</button>
+                    <button type="submit" (click)="onCreate(dataForm.value)" class="btn btn-primary btn-lg">S'inscrire</button>
                   </div>
 
                 </form>

@@ -11,5 +11,8 @@ export class InscreptionComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public onCreate(){
+    
+  }
 
 }

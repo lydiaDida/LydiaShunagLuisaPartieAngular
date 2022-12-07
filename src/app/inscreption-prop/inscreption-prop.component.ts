@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Proprietaire } from '../proprietaire';
+import { ProprietaireService } from '../proprietaire.service';
 
 @Component({
   selector: 'app-inscreption-prop',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InscreptionPropComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ProprietaireService) { }
 
   ngOnInit(): void {
+  }
+  message: any = false;
+  onCreate(proprietaire:Proprietaire){
+    this.service.inscrireProprietaire(proprietaire).subscribe(data=> {this.message=true;
+      
+    })
+
   }
 
 }
