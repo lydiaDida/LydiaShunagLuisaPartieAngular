@@ -24,7 +24,7 @@ const routes: Routes = [
 {path:'propos', component: ProposComponent},
 {path:'connexion', component:ConnexionComponent},
 {path:'connexionProp', component:ConnexionPropComponent},
-
+{path:'espaceAdmin', component:AdminComponent},
 {path:'menu', component:MenuComponent},
 {path:'hebergementsLoc', component: HeberpementsLocataireComponent},
 {path:'admin', component:AdminComponent},

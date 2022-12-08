@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Locataire } from './locataire';
+import { LocataireRetour } from './locataire-retour';
+import { Reservation } from './reservation';
 
 @Injectable({
   providedIn: 'root'
@@ -34,14 +37,18 @@ export class LocataireService  {
   }
 
     //Ajouter une reservation 
-    createReservation(reservation: object): Observable<object> {
-      return this.http.post(`${this.baseUrl}/add`, reservation);
+    createReservation(reservation: Reservation): Observable<Reservation> {
+      return this.http.post<Reservation>(`${this.baseUrl}/add`, reservation);
     }
 
     //Create locataire
-    createLocataire(locataire: object): Observable<object> {
-      return this.http.post(`${this.baseUrlLocataire}/add`, locataire);
-    }
+   // createLocataire(locataire: object): Observable<object> {
+      //return this.http.post(`${this.baseUrlLocataire}/add`, locataire);
+    //}
+    public  createLocataire(locataire: Locataire) : Observable<LocataireRetour>  {
+      return this.http.post<Locataire>("http://localhost:8080/api/v1/locataire/add",locataire);
+     }
+    
   
   
 }

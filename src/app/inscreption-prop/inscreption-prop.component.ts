@@ -13,6 +13,7 @@ export class InscreptionPropComponent implements OnInit {
   constructor(private service:ProprietaireService) { }
 
   ngOnInit(): void {
+    this.onCreate
   }
   message:any;
   dataForm:any;
@@ -20,11 +21,11 @@ export class InscreptionPropComponent implements OnInit {
 
   public onCreate(proprietaire : Proprietaire){
 
-  this.service.inscrireProprietaire(proprietaire).subscribe(data=> {this.message=true;
+  this.service.inscrireProprietaire(proprietaire).subscribe(data=> {this.message=true}, error => console.log(error));
     
-  })
+  
   }
 
- 
+  
 }
 

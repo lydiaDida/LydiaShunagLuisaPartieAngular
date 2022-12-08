@@ -9,27 +9,19 @@ import { Reservation } from '../reservation';
 })
 export class ReserverHebergementComponent implements OnInit {
 
-    reservation: Reservation=new Reservation();
+ 
     constructor( private service: LocataireService) { 
         
     }
+    message : any;
   
     ngOnInit(): void {
-      this.createReservation();
+     // this.createReservation();
     }
   
-    public createReservation()
+    public createReservation(reservation: Reservation)
     {
-
-      this.reservation.dateDeArrive =new Date(Date.now()); 
-      this.reservation.dateDeDepart = new Date(Date.now());
-      this.reservation.nombreAdulte =2;
-      this.reservation.nombreEnfant=2;
-      this.reservation.nombreBebe=2;
-      this.reservation.nombreAnimauxAssistance=2;
-      this.reservation.etatReservation= true;
-      this.service.createReservation(this.reservation).subscribe(data => console.log(data), error => console.log(error));
-      
+      this.service.createReservation(reservation).subscribe(data=> {this.message=true}, error => console.log(error));
     }
-  
+    
   }

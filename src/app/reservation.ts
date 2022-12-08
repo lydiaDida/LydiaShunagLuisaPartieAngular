@@ -1,11 +1,10 @@
-export class Reservation {
+export interface Reservation {
 
-     dateDeArrive: Date | undefined;
-     dateDeDepart: Date| undefined;
-     nombreAdulte: Number| undefined;
-     nombreEnfant: Number| undefined;
-     nombreBebe: Number| undefined;
-     nombreAnimauxAssistance: Number| undefined;
-     etatReservation:boolean| undefined;
-                     
+    dateDeArrive: Date;
+     dateDeDepart: Date;
+     nombreAdulte: Number;
+     nombreEnfant: Number;
+     nombreBebe: Number;
+     nombreAnimauxAssistance: Number;
+     etatReservation:boolean;
 }

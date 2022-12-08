@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocataireService } from '../locataire.service';
-import { ReservationService } from '../reservation.service';
+
 
 @Component({
   selector: 'app-espace-locataire',

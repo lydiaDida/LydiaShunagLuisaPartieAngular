@@ -20,6 +20,7 @@ import { HeberpementsLocataireComponent } from './heberpements-locataire/heberpe
 import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.compo
     ReserverHebergementComponent,
     HeberpementsLocataireComponent,
     ConnexionAdminComponent,
+ 
    
     
   ],
