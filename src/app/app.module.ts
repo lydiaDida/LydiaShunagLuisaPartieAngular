@@ -18,6 +18,9 @@ import { EspaceProprietaireComponent } from './espace-proprietaire/espace-propri
 import { ReserverHebergementComponent } from './reserver-hebergement/reserver-hebergement.component';
 import { HeberpementsLocataireComponent } from './heberpements-locataire/heberpements-locataire.component';
 import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.component';
+import { ListLocataireComponent } from './list-locataire/list-locataire.component';
+import { ListProprietaireComponent } from './list-proprietaire/list-proprietaire.component';
+import { ListHebergementComponent } from './list-hebergement/list-hebergement.component';
 
 
 
@@ -38,6 +41,9 @@ import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.compo
     ReserverHebergementComponent,
     HeberpementsLocataireComponent,
     ConnexionAdminComponent,
+    ListLocataireComponent,
+    ListProprietaireComponent,
+    ListHebergementComponent,
  
    
     

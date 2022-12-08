@@ -15,6 +15,9 @@ import { EspaceProprietaireComponent } from './espace-proprietaire/espace-propri
 import { ReserverHebergementComponent } from './reserver-hebergement/reserver-hebergement.component';
 import { HeberpementsLocataireComponent } from './heberpements-locataire/heberpements-locataire.component';
 import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.component';
+import { ListLocataireComponent } from './list-locataire/list-locataire.component';
+import { ListProprietaireComponent } from './list-proprietaire/list-proprietaire.component';
+import { ListHebergementComponent } from './list-hebergement/list-hebergement.component';
 
 
 
@@ -23,6 +26,9 @@ const routes: Routes = [
 {path:'', component:HomeComponent},
 {path:'propos', component: ProposComponent},
 {path:'connexion', component:ConnexionComponent},
+{path:'listLocataire', component:ListLocataireComponent},
+{path:'listProprietaire', component:ListProprietaireComponent},
+{path:'listHebergement', component:ListHebergementComponent},
 {path:'connexionProp', component:ConnexionPropComponent},
 {path:'espaceAdmin', component:AdminComponent},
 {path:'menu', component:MenuComponent},
