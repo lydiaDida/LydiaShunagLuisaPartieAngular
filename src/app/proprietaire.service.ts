@@ -29,6 +29,10 @@ export class ProprietaireService {
     return this.http.delete(`${this.baseUrl}/delete/${{email}}`, { responseType: 'text' });
   }
 
+  //Supprimer un proprietaire
+  public deleteProprietaire(email: string): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/delete/${email}`, { responseType: 'text' });
+  }
   //Inscrire un proprietaire
    // inscrireProprietaire(proprietaire: object): Observable<object> {
     //return this.http.post(`${this.baseUrl}/add/${proprietaire}`,{ responseType: 'text' });
