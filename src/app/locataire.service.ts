@@ -10,6 +10,7 @@ export class LocataireService  {
   host ="http://localhost:8080/api/v1/reservation/list"
   baseUrl = "http://localhost:8080/api/v1/reservation"
   hostLocataire = "localhost:8080/api/v1/locataire/list"
+  baseUrlLocataire =  "localhost:8080/api/v1/locataire"
 
   constructor(private http : HttpClient) { }
   //getReservation
@@ -36,5 +37,11 @@ export class LocataireService  {
     createReservation(reservation: object): Observable<object> {
       return this.http.post(`${this.baseUrl}/add`, reservation);
     }
+
+    //Create locataire
+    createLocataire(locataire: object): Observable<object> {
+      return this.http.post(`${this.baseUrlLocataire}/add`, locataire);
+    }
+  
   
 }

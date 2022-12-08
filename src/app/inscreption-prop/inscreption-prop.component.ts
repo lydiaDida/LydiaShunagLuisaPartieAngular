@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Adresse } from '../adresse';
 import { Proprietaire } from '../proprietaire';
 import { ProprietaireService } from '../proprietaire.service';
 
@@ -13,12 +14,17 @@ export class InscreptionPropComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  message: any = false;
-  onCreate(proprietaire:Proprietaire){
-    this.service.inscrireProprietaire(proprietaire).subscribe(data=> {this.message=true;
-      
-    })
+  message:any;
+  dataForm:any;
 
+
+  public onCreate(proprietaire : Proprietaire){
+
+  this.service.inscrireProprietaire(proprietaire).subscribe(data=> {this.message=true;
+    
+  })
   }
 
+ 
 }
+

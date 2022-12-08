@@ -1,12 +1,11 @@
-import { Adresse } from "./adresse"
+//Modele pour la classe locataire
 
-export interface Locataire {
+export class Locataire {
 
-    emailLocataire: String
-    motDePasse: String
-    nom: String
-    prenom: String
-    telephone : String
-    etatDeLocataire:Boolean;
-    adresse: Adresse;
+    emailLocataire!: String
+    motDePasse!: String
+    nom!: String
+    prenom!: String
+    telephone! : String
+ 
 }

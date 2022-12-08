@@ -17,6 +17,7 @@ import { EspaceLocataireComponent } from './espace-locataire/espace-locataire.co
 import { EspaceProprietaireComponent } from './espace-proprietaire/espace-proprietaire.component';
 import { ReserverHebergementComponent } from './reserver-hebergement/reserver-hebergement.component';
 import { HeberpementsLocataireComponent } from './heberpements-locataire/heberpements-locataire.component';
+import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { HeberpementsLocataireComponent } from './heberpements-locataire/heberpe
     EspaceProprietaireComponent,
     ReserverHebergementComponent,
     HeberpementsLocataireComponent,
+    ConnexionAdminComponent,
    
     
   ],

@@ -14,6 +14,7 @@ import { EspaceLocataireComponent } from './espace-locataire/espace-locataire.co
 import { EspaceProprietaireComponent } from './espace-proprietaire/espace-proprietaire.component';
 import { ReserverHebergementComponent } from './reserver-hebergement/reserver-hebergement.component';
 import { HeberpementsLocataireComponent } from './heberpements-locataire/heberpements-locataire.component';
+import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
 {path:'inscreption', component:InscreptionComponent},
 {path:'espaceLocataire', component:EspaceLocataireComponent},
 {path:'espaceProprietaire', component:EspaceProprietaireComponent},
+{path:'connexionAdmin', component:ConnexionAdminComponent},
 {path:'inscreptionProp', component:InscreptionPropComponent},
 {path:'reserver', component: ReserverHebergementComponent},
 {path:'',redirectTo:'' ,pathMatch:'full'},
