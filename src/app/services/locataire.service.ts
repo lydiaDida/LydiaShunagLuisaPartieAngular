@@ -46,12 +46,14 @@ export class LocataireService  {
     }
 
     //Create locataire
-   // createLocataire(locataire: object): Observable<object> {
-      //return this.http.post(`${this.baseUrlLocataire}/add`, locataire);
-    //}
-    public  createLocataire(locataire: Locataire) : Observable<LocataireRetour>  {
+    public inscrireLocataire(locataire: Locataire) : Observable<LocataireRetour>  {
       return this.http.post<Locataire>("http://localhost:8080/api/v1/locataire/add",locataire);
+        
+      
      }
+    //public  inscrireLocataire(locataire: Locataire) : Observable<Locataire>  {
+      //return this.http.post<Locataire>("http://localhost:8080/api/v1/locataire/add",locataire);
+    // }
     
   
   

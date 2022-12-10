@@ -7,4 +7,6 @@ export interface Reservation {
      nombreBebe: Number;
      nombreAnimauxAssistance: Number;
      etatReservation:boolean;
+     emailLocataire:string;
+     hebergementId:number;
 }

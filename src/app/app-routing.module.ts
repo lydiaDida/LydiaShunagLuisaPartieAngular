@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { HebergementComponent } from './hebergement/hebergement.component';
 import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu.component';
 import { ConnexionComponent } from './connexion-locataire/connexion.component';
 import { ProposComponent } from './propos/propos.component';
 import { InscreptionComponent } from './inscreption-locataire/inscreption.component';
@@ -34,10 +31,8 @@ const routes: Routes = [
 {path:'listHebergement', component:ListHebergementComponent},
 {path:'connexionProp', component:ConnexionPropComponent},
 {path:'espaceAdmin', component:AdminComponent},
-{path:'menu', component:MenuComponent},
 {path:'hebergementsLoc', component: HeberpementsLocataireComponent},
 {path:'admin', component:AdminComponent},
-{path:'hebergement', component:HebergementComponent},
 {path:'inscreption', component:InscreptionComponent},
 {path:'espaceLocataire', component:EspaceLocataireComponent},
 {path:'espaceProprietaire', component:EspaceProprietaireComponent},

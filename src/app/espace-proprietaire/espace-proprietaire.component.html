@@ -1,59 +1,58 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Espace Proprietaire</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Espace Proprietaire</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+     
+      <a routerLink="propos" class="nav-link active" href="#">Deconnexion
+        <span class="visually-hidden">(current)</span>
+      </a>
+    </button>
+
+  </div>
+ 
+</nav>
+<div class="container">
+    <div class="row">
+      <H3>Mes hebergements</H3>
       
-        <a routerLink="propos" class="nav-link active" href="#">Deconnexion
-          <span class="visually-hidden">(current)</span>
-        </a>
-      </div>
-    </div>
-   
-  </nav>
-  <div class="container">
-      <div class="row">
-        <H3>Mes hebergements</H3>
-        
-        <div class="col-sm-4">
-          <button type="button" class="btn btn-primary add-new" routerLink="Reserver"><i class="fa fa-plus"></i> Reserver un hebergement</button>
-          </div>
-        <div class="col-12" >
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">Photos</th>
-                <th scope="col">Prix</th>
-                <th scope="col">Adresse</th>
-                <th scope="col">Etat</th>
-                <th scope="col">Type</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let b of hebergements" >  
-                <th scope="row"><img width="300px" height="300px" alt="My image name" src={{b.repertoireDePhoto}}></th>
-                <td>{{b.prix | number:'0.00'}}</td>
-                
-                <td>{{b.adresse.numeroDeRue}},{{b.adresse.rue}}
-                  {{b.adresse.ville}},
-                  {{b.adresse.province}},
-                  {{b.adresse.pays}},
-                  {{b.adresse.codePostale}}
-                </td>
-                <td>{{b.etatDeHebergement}}</td>
-                <td>{{b.typeDeHebergement.typeDeHebergement}}</td>
-                <td>
-                  
-                  <!--<button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>-->
-                <button (click)="deleteHebergement(b.id)" type="button" class="btn btn-danger" ><i class="far fa-trash-alt"></i>Supprimer</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="col-sm-4">
+        <!--Pas demander -->
+        <button type="button" class="btn btn-success add-new" routerLink="Reserver"><i class="fa fa-plus"></i> Ajouter un hebergement</button>
         </div>
+      <div class="col-12" >
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Photos</th>
+              <th scope="col">Prix</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Etat</th>
+              <th scope="col">Type</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let b of hebergements" >  
+              <th scope="row"><img width="300px" height="300px" alt="My image name" src={{b.repertoireDePhoto}}></th>
+              <td>{{b.prix | number:'0.00'}}</td>
+              
+              <td>{{b.adresse.numeroDeRue}},{{b.adresse.rue}}
+                {{b.adresse.ville}},
+                {{b.adresse.province}},
+                {{b.adresse.pays}},
+                {{b.adresse.codePostale}}
+              </td>
+              <td>{{b.etatDeHebergement}}</td>
+              <td>{{b.typeDeHebergement.typeDeHebergement}}</td>
+              <td>
+                
+                <!--<button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>-->
+              <button class="bi bi-trash"(click)="deleteHebergement(b.id)" type="button" class="btn btn-danger" >Supprimer</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  
+  </div>
+

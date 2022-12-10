@@ -1,4 +1,4 @@
-import { Proprietaire } from './proprietaire';
+import { Proprietaire } from '../models/proprietaire';
 
 describe('Proprietaire', () => {
   it('should create an instance', () => {

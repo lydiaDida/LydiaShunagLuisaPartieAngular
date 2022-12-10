@@ -9,19 +9,24 @@ import { Reservation } from '../models/reservation';
 })
 export class ReserverHebergementComponent implements OnInit {
 
- 
-    constructor( private service: LocataireService) { 
-        
-    }
-    message : any;
-  
-    ngOnInit(): void {
-     // this.createReservation();
-    }
-  
-    public createReservation(reservation: Reservation)
-    {
-      this.service.createReservation(reservation).subscribe(data=> {this.message=true}, error => console.log(error));
-    }
-    
+   email: string = 'alain@gmail.com';
+
+  hebergement_id: number = 4;
+
+  constructor(private service: LocataireService) {
+
   }
+  message: any;
+
+  ngOnInit(): void {
+    // this.createReservation();
+  }
+
+  public createReservation(reservation: Reservation) {
+    reservation.hebergementId = this.hebergement_id;
+    console.log(reservation);
+
+    this.service.createReservation(reservation).subscribe(data => { this.message = true }, error => console.log(error));
+  }
+
+}

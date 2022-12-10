@@ -1,6 +1,6 @@
 
 export interface Locataire {
-    emailProprietaire:string;
+    emailLocataire:string;
     motDePasse: string;
     nom: string;
     prenom: string;

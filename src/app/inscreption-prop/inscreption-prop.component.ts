@@ -17,11 +17,14 @@ export class InscreptionPropComponent implements OnInit {
   }
   message:any;
   dataForm:any;
-
+  proprietaire:any
 
   public onCreate(proprietaire : Proprietaire){
 
   this.service.inscrireProprietaire(proprietaire).subscribe(data=> {this.message=true}, error => console.log(error));
+  
+
+  
     
   
   }

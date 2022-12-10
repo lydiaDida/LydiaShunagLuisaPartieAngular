@@ -39,6 +39,8 @@ export class ProprietaireService {
   //}
  public inscrireProprietaire(proprietaire: Proprietaire) : Observable<ProprietaireRetour>  {
   return this.http.post<Proprietaire>("http://localhost:8080/api/v1/proprietaire/add",proprietaire);
+    //Vider les champs apres l'enregistrement
+  
  }
 
 //Supprimer un proprietaire

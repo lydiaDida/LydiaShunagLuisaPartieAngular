@@ -1,5 +1,5 @@
 export interface LocataireRetour {
-    emailProprietaire:string;
+    emailLocataire:string;
     nom: string;
     prenom: string;
     telephone: string;
