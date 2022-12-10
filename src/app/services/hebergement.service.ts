@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Hebergement } from '../hebergement';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class HebergementService {
-  //Service web coté backEnd qui retourne la liste de tous les hebergements
+  //Service web coté backEnd 
   host ="http://localhost:8080/api/v1/hebergement/list"
   hostDelete = "http://localhost:8080/api/v1/hebergement/delete/{id}"
   baseUrl =  "http://localhost:8080/api/v1/hebergement"
-
+  baseUrlCriteria = "http://localhost:8080/api/v1/hebergement/critere"
 
   constructor(private http : HttpClient) { }
  
@@ -39,9 +40,18 @@ export class HebergementService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  updateStudent(hebergement: object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}/update`, hebergement);
-  }
+
+
+ // get list hebergement par critere
+ // attention: params may be HttpParams,JSON,string
+ getHebergementParCritere(critere: HttpParams):Observable<Hebergement[]>{
+console.log("in service ====>" + critere.toString());
+ return this.http.get<Hebergement[]>(this.baseUrlCriteria, {params:critere});
+}
+
+
+
+
 
     //Modifier un hebergement
       //Ajouter hebergement

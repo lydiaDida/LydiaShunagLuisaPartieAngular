@@ -1,0 +1,93 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Hebergement</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a routerLink="propos" class="nav-link active" href="#">A propos
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a routerLink="/connexionAdmin" class="nav-link" >Admin</a>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/connexion">Locataire</a>
+              <a class="dropdown-item" routerLink ="/connexionProp">Proprietaire</a>
+            </div>
+          </li>
+        </ul>
+    
+      </div>
+    </div>
+  </nav>
+<div class="container1">
+    <form>
+        <div class="row">
+            <div class="col">
+                <label>Prix min</label>
+                <input type="text" class="form-control" id="prixMin" [(ngModel)] = "prixMin" [ngModelOptions]="{standalone: true}" />
+            </div>
+            <div class="col">
+                <label>Prix max</label>
+                <input type="text" class="form-control" id="prixMax" [(ngModel)] = "prixMax" [ngModelOptions]="{standalone: true}" />
+            </div>
+      
+            <div class="col">
+                <label>Type</label>
+                <select name="type" class="form-control"  id="type" [ngModel]= "type" (change)="getType($event)" [ngModelOptions]="{standalone: true}" >
+                    <option  [value] = "item.id" *ngFor="let item of typeDeHebergement">{{item.id}}--{{item.typeDeHebergement}}</option>
+                </select>
+            </div>
+            <div class="col">
+                <label>Secteur </label>
+                <select name="secteur" class="form-control"  id="secteur" [ngModel]= "secteur" (change)="getSecteur($event)" [ngModelOptions]="{standalone: true}" >
+                    <option  [value] = "item.id" *ngFor="let item of secteurDeHebergement">{{item.id}}--{{item.secteurDeHebergement}}</option>
+                </select>
+            </div>
+            <div class="col">
+                <label>Date d'arrivé</label>
+                <input type="date"  class="form-control" id="dateDeArrive" [(ngModel)]= "dateDeArrive" [ngModelOptions]="{standalone: true}" />
+            </div>
+
+            <div class="col">
+                <label>Date de départ</label>
+                <input type="date"  class="form-control" id="dateDeDepart" [(ngModel)]= "dateDeDepart" [ngModelOptions]="{standalone: true}" />
+            </div>
+            <div class="col">
+                <label>Date de départ</label>
+                <button (click)="chercherParCritere()" class="btn btn-success" routerLink ="/criteria">Chercher</button>
+            </div>
+          
+            <br/>
+    
+        </div>
+
+
+    </form>
+    
+</div>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let b of hebergements">
+            <div class="card-body">
+              <div class="row">
+                <h5 class="card-title">
+                  <img width="300px" height="300px" alt="My image name" src={{b.repertoireDePhoto}}>
+               
+                </h5>
+                </div>
+              <h2 class="card-text" style="color: rgb(0, 128, 19);"><span class="text-muted font-weight-bold">{{b.prix}} $</span></h2>
+              
+              <button type="button" class="btn btn-success"   routerLink="/connexion">Reserver</button>
+            </div>
+    </div>
+</div>

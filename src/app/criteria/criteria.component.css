@@ -1,7 +1,7 @@
 .container {  
    
     color: #fff;
-
+    background-image: url("../../assets/images/fondBlanc.jpg");
     background-size: 650 px  ;  
     background-size: cover;  
     display: block;

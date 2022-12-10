@@ -1,3 +1,6 @@
+
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Hebergement</a>
@@ -13,26 +16,28 @@
         </li>
 
         <li class="nav-item">
-          <a routerLink="connexionAdmin" class="nav-link" >Admin</a>
+          <a routerLink="/connexionAdmin" class="nav-link" >Admin</a>
         </li>
        
          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" routerLink="connexion">Locataire</a>
+            <a class="dropdown-item" routerLink="/connexion">Locataire</a>
             <a class="dropdown-item" routerLink ="/connexionProp">Proprietaire</a>
 
           </div>
         </li>
+        <li class="nav-item">
+          <a routerLink="/criteria" class="nav-link" >Rechercher</a>
+        </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
-      </form>
+  
     </div>
   </div>
- 
 </nav>
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let b of hebergements">
@@ -43,9 +48,16 @@
                
                 </h5>
                 </div>
-              <h3 class="card-text"><span class="text-muted font-weight-bold">{{b.prix}} $</span></h3>
-            <button type="button" class="btn btn-primary"   routerLink="/connexion">Reserver</button>
-              <h5 class="card-title">{{b.adresse}}</h5>          
+              <h2 class="card-text" style="color: rgb(0, 128, 19);"><span class="text-muted font-weight-bold">{{b.prix}} $</span></h2>
+          
+              <h5>Situe à: {{b.adresse.numeroDeRue}},{{b.adresse.rue}}
+                {{b.adresse.ville}},
+                {{b.adresse.province}},
+                {{b.adresse.pays}},
+                {{b.adresse.codePostale}}
+              </h5> 
+              <h5>Type: {{b.typeDeHebergement.typeDeHebergement}}</h5> 
+              <button type="button" class="btn btn-success"   routerLink="/connexion">Reserver</button>
             </div>
     </div>
 </div>

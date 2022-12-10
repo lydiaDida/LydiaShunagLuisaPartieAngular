@@ -21,6 +21,7 @@ import { ConnexionAdminComponent } from './connexion-admin/connexion-admin.compo
 import { ListLocataireComponent } from './list-locataire/list-locataire.component';
 import { ListProprietaireComponent } from './list-proprietaire/list-proprietaire.component';
 import { ListHebergementComponent } from './list-hebergement/list-hebergement.component';
+import { CriteriaComponent } from './criteria/criteria.component';
 
 
 
@@ -44,6 +45,7 @@ import { ListHebergementComponent } from './list-hebergement/list-hebergement.co
     ListLocataireComponent,
     ListProprietaireComponent,
     ListHebergementComponent,
+    CriteriaComponent,
  
    
     

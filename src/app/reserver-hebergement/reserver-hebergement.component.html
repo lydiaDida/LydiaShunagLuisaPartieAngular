@@ -6,13 +6,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a routerLink="propos" class="nav-link active" href="#">A propos
-              <span class="visually-hidden">(current)</span>
-            </a>
-          </li>
    <li class="nav-item">
-            <a class="nav-link"  routerLink="">Nos hebergements</a>
           </li>
           <li class="nav-item">
             <a routerLink="connexion" class="nav-link" >Admin</a>
@@ -27,10 +21,7 @@
             </div>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-sm-2" type="text" placeholder="Rechercher">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
-        </form>
+       
       </div>
     </div>
    
@@ -120,7 +111,7 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button (click)="createReservation(dataForm.value)" type="submit" class="btn btn-primary btn-lg">Reserver</button>
+                      <button (click)="createReservation(dataForm.value)" type="submit" class="btn btn-success btn-lg">Reserver</button>
                     </div>
   
                   </form>

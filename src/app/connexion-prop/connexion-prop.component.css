@@ -1,7 +1,7 @@
 .container {  
    
     color: #fff;
-    background-image:  url("../../assets/images/h1.jpeg");
+    background-image:  url("../../assets/images/12.webp");
     background-size: 650 px  ;  
     background-size: cover;  
     display: block;
@@ -15,6 +15,6 @@
 h1 {
    
    
-    color:rgb(43, 86, 226);
+    color:green;
     font-family: "Times New Roman", Times, serif;
   }
