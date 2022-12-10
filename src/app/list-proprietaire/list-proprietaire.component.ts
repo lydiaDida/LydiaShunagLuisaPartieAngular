@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProprietaireService } from '../proprietaire.service';
+import { Proprietaire } from '../models/proprietaire';
+import { ProprietaireService } from '../services/proprietaire.service';
 
 @Component({
   selector: 'app-list-proprietaire',
@@ -15,7 +16,7 @@ export class ListProprietaireComponent implements OnInit {
     this.deleteProprietaire;
   }
 
-  private getProprietaire()
+  public getProprietaire()
   {
     this.service.getListProprietaire().subscribe(data=>this.proprietaires = data)
   }

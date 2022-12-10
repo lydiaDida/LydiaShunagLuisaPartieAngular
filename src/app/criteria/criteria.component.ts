@@ -7,7 +7,7 @@ import { SecteurDeHebergment } from '../models/secteur-de-hebergment';
 import { HttpParams } from '@angular/common/http';
 import { formatDate } from '@angular/common';
 import { Inject, LOCALE_ID } from '@angular/core';
-import { Hebergement } from '../hebergement';
+import { Hebergement } from '../models/hebergement';
 @Component({
   selector: 'app-criteria',
   templateUrl: './criteria.component.html',

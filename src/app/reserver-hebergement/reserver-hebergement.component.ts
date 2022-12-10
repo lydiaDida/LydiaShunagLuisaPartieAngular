@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocataireService } from '../locataire.service';
-import { Reservation } from '../reservation';
+import { LocataireService } from '../services/locataire.service';
+import { Reservation } from '../models/reservation';
 
 @Component({
   selector: 'app-reserver-hebergement',

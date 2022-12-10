@@ -20,6 +20,9 @@ export class HeberpementsLocataireComponent implements OnInit {
     {
       this.service.getHebergements().subscribe(data=>this.hebergements = data)
     }
-  
+    public onReserver()
+    {
+      
+    }
   }
   

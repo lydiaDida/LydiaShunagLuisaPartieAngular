@@ -13,10 +13,9 @@
         </button>
     </div>
   </nav>
+  <h3>Gerer les locataires</h3>
   <div class="container">
       <div class="row">
-        
-       
         <div class="col-12" >
           <table class="table table-bordered">
             <thead>
@@ -30,9 +29,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let b of locataires" >  
-                
-                <td>{{b.emailLocataire}}</td>
+              <tr *ngFor="let b of locataires">  
+                jjjjjjj
+                <th>{{b.emailLocataire}}</th>
                 <td>{{b.nom}}</td>
                 <td>{{b.prenom}}</td>
                 <td>{{b.telephone}}</td>
@@ -45,8 +44,7 @@
                 </td>
                
                 <td>
-                  
-                  <!--<button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>-->
+                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>
                 <button (click)="deleteLocataire(b.emailLocataire)" type="button" class="btn btn-danger" ><i class="far fa-trash-alt"></i>Supprimer</button>
                 </td>
               </tr>

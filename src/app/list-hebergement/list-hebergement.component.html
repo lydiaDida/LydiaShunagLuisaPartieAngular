@@ -13,10 +13,9 @@
         </button>
     </div>
   </nav>
+  <h3>Gerer les hebergements</h3>
   <div class="container">
       <div class="row">
-        
-       
         <div class="col-12" >
           <table class="table table-bordered">
             <thead>
@@ -44,7 +43,7 @@
                 <td>{{b.typeDeHebergement.typeDeHebergement}}</td>
                 <td>
                   
-                  <!--<button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>-->
+                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>
                 <button (click)="deleteHebergement(b.id)" type="button" class="btn btn-danger" ><i class="far fa-trash-alt"></i>Supprimer</button>
                 </td>
               </tr>

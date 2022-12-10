@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Locataire } from './locataire';
-import { LocataireRetour } from './locataire-retour';
-import { Reservation } from './reservation';
+import { Locataire } from '../models/locataire';
+
+import { LocataireRetour } from '../models/locataire-retour';
+import { Reservation } from '../models/reservation';
 
 @Injectable({
   providedIn: 'root'

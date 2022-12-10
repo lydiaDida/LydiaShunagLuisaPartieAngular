@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Locataire } from '../locataire';
-import { LocataireService } from '../locataire.service';
-import { Proprietaire } from '../proprietaire';
+import { Locataire } from '../models/locataire';
+import { LocataireService } from '../services/locataire.service';
+import { Proprietaire } from '../models/proprietaire';
 
 @Component({
   selector: 'app-inscreption',

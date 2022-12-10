@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Hebergement } from '../hebergement';
-
+import { Hebergement } from '../models/hebergement';
+import { Reservation } from '../models/reservation';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,7 @@ export class HebergementService {
   hostDelete = "http://localhost:8080/api/v1/hebergement/delete/{id}"
   baseUrl =  "http://localhost:8080/api/v1/hebergement"
   baseUrlCriteria = "http://localhost:8080/api/v1/hebergement/critere"
+  baseUrlReservation = "http://localhost:8080/api/v1/reservation"
 
   constructor(private http : HttpClient) { }
  
@@ -36,14 +37,19 @@ export class HebergementService {
     return this.http.post(`${this.baseUrl}/add`, hebergement);
   }
 
+   //Ajouter une reservation
+   createReservation(reservation: Reservation): Observable<object> {
+    return this.http.post(`${this.baseUrlReservation}/add`,reservation);
+  }
+
+
   getHebergement(id: number): Observable<Object> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-
-
  // get list hebergement par critere
- // attention: params may be HttpParams,JSON,string
+ //Un corps de requête/réponse HTTP qui représente des paramètres sérialisés, selon le type
+ // attention: params peut etre HttpParams,JSON,string
  getHebergementParCritere(critere: HttpParams):Observable<Hebergement[]>{
 console.log("in service ====>" + critere.toString());
  return this.http.get<Hebergement[]>(this.baseUrlCriteria, {params:critere});

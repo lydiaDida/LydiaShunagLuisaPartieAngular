@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocataireService } from '../locataire.service';
+import { LocataireService } from '../services/locataire.service';
 
 @Component({
   selector: 'app-list-locataire',
@@ -15,9 +15,11 @@ export class ListLocataireComponent implements OnInit {
     this.deleteLocataire;
   }
 
-  private getLocataire()
+  public getLocataire()
   {
-    this.service.getLocataireList().subscribe(data=>this.locataires = data)
+    this.service.getLocataireList().subscribe(data =>{
+      this.locataires =data
+      })
   }
   public deleteLocataire(email:string) {
     this.service.deleteLocataire(email)

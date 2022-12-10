@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Proprietaire } from './proprietaire';
-import { ProprietaireRetour } from './proprietaire-retour';
+import { Proprietaire } from '../models/proprietaire';
+import { ProprietaireRetour } from '../models/proprietaire-retour';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ import { ProprietaireRetour } from './proprietaire-retour';
 
 export class ProprietaireService {
   //Service web coté backEnd qui retourne la liste de tous les hebergements
-  host ="http://localhost:8080/api/v1/proprietaire/list"
+  hostListProprietaire ="http://localhost:8080/api/v1/proprietaire/list"
   hostDelete = "http://localhost:8080/api/v1/proprietaire/delete/{id}"
 
    baseUrl =  "http://localhost:8080/api/v1/proprietaire"
@@ -21,7 +21,7 @@ export class ProprietaireService {
   //getListProprietaire
   public getListProprietaire()
   {
-    return this.http.get(this.host)
+    return this.http.get(this.hostListProprietaire )
   }
 
   //Supprimer un proprietaire

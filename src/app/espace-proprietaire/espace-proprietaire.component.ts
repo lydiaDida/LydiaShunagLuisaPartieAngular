@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HebergementService } from '../services/hebergement.service';
 import { Observable,Subject } from "rxjs";
-import { Hebergement } from '../hebergement';
+import { Hebergement } from '../models/hebergement';
 
 
 @Component({
