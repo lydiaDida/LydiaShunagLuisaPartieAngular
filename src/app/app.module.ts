@@ -21,6 +21,7 @@ import { CriteriaComponent } from './criteria/criteria.component';
 import { ListHebergementComponent } from './list-hebergement/list-hebergement.component';
 import { ListLocataireComponent } from './list-locataire/list-locataire.component';
 import { ListProprietaireComponent } from './list-proprietaire/list-proprietaire.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { ListProprietaireComponent } from './list-proprietaire/list-proprietaire
     ListHebergementComponent,
     ListLocataireComponent,
     ListProprietaireComponent,
+    LoginAdminComponent,
    
     
   ],

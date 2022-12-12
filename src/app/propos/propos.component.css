@@ -1,7 +1,7 @@
 #sect1 {  
    
     color: #fff;
-    background-image: url("../../assets/images/m1.jpg");
+    background-image: url("../../assets/images/connecter.jpg");
     background-size: 650 px  ;  
     background-size: cover;  
     margin: 0px;
@@ -15,7 +15,7 @@
   h1 {
     text-align: center;
    
-    color:rgb(198, 226, 43);
+    color:green;
     font-family: "Times New Roman", Times, serif;
   }
   h3 {

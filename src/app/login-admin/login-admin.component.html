@@ -1,0 +1,48 @@
+
+<!----------------------------------NavBar----------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand"  routerLink="">Accueil</a> 
+      <div class="collapse navbar-collapse" id="navbarColor01">
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  <div class="container">
+    <h1>Connexion</h1>
+    <p></p>
+    
+    <div class="row-sm-4">
+      <!--Formulaire de connexion de locataire-------------------------------------------->
+  <form style="text-align: center" #userForm="ngForm" > 
+       <div class="col-sm-4">
+        <div class="form-outline mb-4">
+            <input type="email" id="form2Example1" class="form-control" ngModel name="email"/>
+            <label class="form-label" for="form2Example1">Email </label>
+          </div>
+        
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input type="password" id="form2Example2" class="form-control" ngModel name="pwd"/>
+            <label class="form-label" for="form2Example2">Mot de passe</label>
+          </div>
+        
+    
+        
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-success btn-block mb-4"  (click)="onConnexion(userForm.value)">Se connecter</button>
+        
+          <!-- Register buttons -->
+          <div class="text-center">
+            <button type="button" class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+      
+            </div>
+        </div>
+  </form>
+  
+  </div> 
+  </div>

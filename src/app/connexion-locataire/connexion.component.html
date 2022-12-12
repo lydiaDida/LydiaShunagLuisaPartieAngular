@@ -2,7 +2,7 @@
 <!----------------------------------NavBar----------------------------------------->
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">HEBERGEMENETS</a>
+    <a class="navbar-brand"  routerLink="">Accueil</a>
     <a class="navbar-brand" href="#"  routerLink="/inscreptionProp">Inscpretion propriétaire</a>
     <a class="navbar-brand" href="#"  routerLink="/inscreption">Inscpretion Locataire</a>  
     <a class="navbar-brand" href="#"  routerLink="/connexionProp">Connexion proprietaire</a>  
@@ -18,7 +18,7 @@
   <p></p>
   
   <div class="row-sm-4">
-    <!--Formulaire de connexion de proprietaire-------------------------------------------->
+    <!--Formulaire de connexion de locataire-------------------------------------------->
 <form style="text-align: center" #userForm="ngForm" > 
      <div class="col-sm-4">
       <div class="form-outline mb-4">
@@ -35,7 +35,7 @@
   
       
         <!-- Submit button -->
-        <button type="submit" class="btn btn-sucess btn-block mb-4"  (click)="onConnexion(userForm.value)">Se connecter</button>
+        <button type="submit" class="btn btn-success btn-block mb-4"  (click)="onConnexion(userForm.value)">Se connecter</button>
       
         <!-- Register buttons -->
         <div class="text-center">

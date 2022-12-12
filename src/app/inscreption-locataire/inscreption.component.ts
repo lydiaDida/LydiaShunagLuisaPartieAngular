@@ -23,7 +23,7 @@ export class InscreptionComponent implements OnInit {
 
   this.service.inscrireLocataire(locataire).subscribe(data=> {this.message=true}, error => console.log(error));
   
-
+  console.log(locataire);
   
   }
 

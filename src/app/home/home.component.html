@@ -3,20 +3,19 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Hebergement</a>
+    <a class="navbar-brand" >Reservation Hebergement</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a routerLink="propos" class="nav-link active" href="#">A propos
-            <span class="visually-hidden">(current)</span>
-          </a>
+          <!--<a routerLink="propos" class="nav-link " href="#">A propos de nous
+          </a>-->
         </li>
 
         <li class="nav-item">
-          <a routerLink="/connexionAdmin" class="nav-link" >Admin</a>
+          <a routerLink="/loginAdmin" class="nav-link " >Admin</a>
         </li>
        
          <li class="nav-item dropdown">
@@ -28,7 +27,7 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">S'inscrire</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/inscreptionProp">Proprietaire</a>
             <a class="dropdown-item" routerLink ="/inscreption">Locataire</a>
@@ -36,7 +35,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a routerLink="/criteria" class="nav-link" >Rechercher</a>
+          <!--<a routerLink="/criteria" class="nav-link" >Rechercher</a>-->
         </li>
       </ul>
   
@@ -44,9 +43,9 @@
   </div>
 </nav>
 
+<app-propos></app-propos>
 
-
-<div class="container">
+<!--<div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let b of hebergements">
             <div class="card-body">
@@ -71,5 +70,5 @@
     </div>
 </div>
 
-    
+-->
     

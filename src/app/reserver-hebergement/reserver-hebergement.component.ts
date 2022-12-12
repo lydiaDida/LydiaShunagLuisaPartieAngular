@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocataireService } from '../services/locataire.service';
 import { Reservation } from '../models/reservation';
+import { MessageService } from '../services/message.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-reserver-hebergement',
@@ -9,23 +11,28 @@ import { Reservation } from '../models/reservation';
 })
 export class ReserverHebergementComponent implements OnInit {
 
-   email: string = 'alain@gmail.com';
+  hebergement_id: number = 0;
 
-  hebergement_id: number = 4;
+  subscription: Subscription = new Subscription();
 
-  constructor(private service: LocataireService) {
-
+  constructor(private service: LocataireService,
+              private messageService: MessageService) {
+    // recuperer hebergement id pour le passer 
+       this.subscription = this.messageService.shareData$.subscribe((data: number) => {
+       console.log("recieve hebergement id ========> " + data);
+       this.hebergement_id = data;
+    });
   }
+
+
   message: any;
 
-  ngOnInit(): void {
-    // this.createReservation();
+  ngOnInit(): void {    
   }
 
   public createReservation(reservation: Reservation) {
     reservation.hebergementId = this.hebergement_id;
     console.log(reservation);
-
     this.service.createReservation(reservation).subscribe(data => { this.message = true }, error => console.log(error));
   }
 

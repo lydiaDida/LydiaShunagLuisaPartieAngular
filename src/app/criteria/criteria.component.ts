@@ -8,6 +8,7 @@ import { HttpParams } from '@angular/common/http';
 import { formatDate } from '@angular/common';
 import { Inject, LOCALE_ID } from '@angular/core';
 import { Hebergement } from '../models/hebergement';
+import { MessageService } from '../services/message.service';
 @Component({
   selector: 'app-criteria',
   templateUrl: './criteria.component.html',
@@ -17,6 +18,7 @@ export class CriteriaComponent implements OnInit {
 
   constructor(private typeService: TypeDeHebergementServiceService, 
               private secteurSevice: SecteurDeHebergementServiceService,
+              private messageService: MessageService,
               private hebergementService: HebergementService,
               @Inject(LOCALE_ID) private locale:string) { }
   
@@ -33,7 +35,7 @@ export class CriteriaComponent implements OnInit {
   dateDeArrive:Date = new Date();
   dateDeDepart:Date = new Date();
   // return value
-  hebergements:Hebergement[] = [];
+  hebergements:any;
 
 
   ngOnInit(): void {
@@ -73,6 +75,10 @@ export class CriteriaComponent implements OnInit {
     this.hebergementService.getHebergementParCritere(critere).subscribe(data=>this.hebergements = data);
 
   }
-
+  getHebergementId(id:number){
+    console.log("==========> send hebergement id " + id);
+    // send id to message service
+    this.messageService.sendData(id);
+    }
 }
 

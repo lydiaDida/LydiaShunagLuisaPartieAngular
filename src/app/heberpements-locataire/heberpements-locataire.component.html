@@ -38,8 +38,13 @@
                 </h5>
                 </div>
               <h3 class="card-text"><span class="text-muted font-weight-bold">{{b.prix}} $</span></h3>
-            <button type="button" class="btn btn-success" (click)="onReserver()"  routerLink="/reserver">Reserver</button>
-              <h5 class="card-title">{{b.adresse}}</h5>          
+              <button type="button" class="btn btn-success" (click)="getHebergementId(b.id)" routerLink="/reserver">Reserver</button>
+              <h3> Situe à: {{b.adresse.numeroDeRue}},{{b.adresse.rue}}
+                {{b.adresse.ville}},
+                {{b.adresse.province}},
+                {{b.adresse.pays}},
+                {{b.adresse.codePostale}} </h3> 
+                <h4>Type: {{b.typeDeHebergement.typeDeHebergement}}</h4>        
             </div>
     </div>
 </div>

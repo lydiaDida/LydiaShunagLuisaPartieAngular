@@ -16,6 +16,7 @@ import { ListLocataireComponent } from './list-locataire/list-locataire.componen
 import { ListProprietaireComponent } from './list-proprietaire/list-proprietaire.component';
 import { ListHebergementComponent } from './list-hebergement/list-hebergement.component';
 import { CriteriaComponent } from './criteria/criteria.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
 {path:'propos', component: ProposComponent},
 
 {path:'criteria', component: CriteriaComponent},
+{path:'loginAdmin', component: LoginAdminComponent},
 {path:'connexion', component:ConnexionComponent},
 {path:'listLocataire', component:ListLocataireComponent},
 {path:'listProprietaire', component:ListProprietaireComponent},

@@ -1,69 +1,46 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">HEBERGEMENETS</a>
+    <a class="navbar-brand" >Reservation Hebergement</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a routerLink="/" class="nav-link active" href="#">Accueil
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>   
+        </li>
+        <li class="nav-item">
+          <a routerLink="/home" class="nav-link " >Deconnexion</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/criteria" class="nav-link" >Rechercher par critere</a>
+        </li>
       </ul>
-      <ul class="navbar-nav me-auto">
-        
-      </ul>
-
-          <a routerLink="propos" class="nav-link active" href="#">Deconnexion
-            <span class="visually-hidden">(current)</span>
-          </a>
-        
+  
     </div>
   </div>
- 
 </nav>
 <div class="container">
   <div class="row">
-    <H3>Mes réservations</H3>
-    
-    <div class="col-sm-4">
-      <button type="button" class="btn btn-primary add-new" routerLink="/hebergementsLoc"><i class="fa fa-plus"></i> Ajouter </button>
-      </div>
-    <div class="col-12">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-
-            <th scope="col">Date d'arrivée</th>
-            <th scope="col">Date de départ</th>
-            <th scope="col">Nombre d'adultes</th>
-            <th scope="col">Nombre d'enfants</th>
-            <th scope="col">Nombre de bébés</th>
-            <th scope="col">Nombre d'animaux</th>
-            <th scope="col">Etat de la reservation</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr *ngFor="let b of reservations" >  
-           
-            <td>{{b.dateDeArrive}}</td>
-            <td>{{b.dateDeDepart}}</td>
-            <td>{{b.nombreEnfant}}</td>
-            <td>{{b.nombreAdulte}}</td>
-            <td>{{b.nombreBebe}}</td>
-            <td>{{b.nombreAnimauxAssistance}}</td>
-            <td>{{b.etatReservation}}</td>
-            <td>
-              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i>Modifier</button>
-              <button (click)="deleteReservation(b.numeroDeReservation)" type="button" class="btn btn-danger" ><i class="far fa-trash-alt"></i>Supprimer</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="col-md-4" *ngFor="let b of hebergements">
+            <div class="card-body">
+              <div class="row">
+                <h5 class="card-title">
+                  <img width="300px" height="300px" alt="My image name" src={{b.repertoireDePhoto}}>
+                </h5>
+                </div>
+              <h2 >{{b.prix}} $</h2>
+              <h5>Situe à: {{b.adresse.numeroDeRue}},{{b.adresse.rue}}
+                {{b.adresse.ville}},
+                {{b.adresse.province}},
+                {{b.adresse.pays}},
+                {{b.adresse.codePostale}}
+              </h5> 
+              <h5>Type: <h3>{{b.typeDeHebergement.typeDeHebergement}}</h3></h5> 
+              <button type="button" class="btn btn-success" (click)="getHebergementId(b.id)" routerLink="/reserver">Reserver</button> 
+            </div>
     </div>
-  </div>
 </div>
+
+
+    

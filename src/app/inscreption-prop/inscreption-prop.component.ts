@@ -23,12 +23,14 @@ export class InscreptionPropComponent implements OnInit {
 
   this.service.inscrireProprietaire(proprietaire).subscribe(data=> {this.message=true}, error => console.log(error));
   
-
-  
-    
-  
+}
+public onSubmit(dataForm:any)
+{
+ this.dataForm.reset;
+}
+ 
   }
 
   
-}
+
 

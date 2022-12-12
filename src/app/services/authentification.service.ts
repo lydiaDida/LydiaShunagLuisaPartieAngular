@@ -6,38 +6,39 @@ import { Injectable } from '@angular/core';
 export class AuthentificationService {
   //Pour tester 
   //Apres ces donnees on doit les recuperer de la bd ou on stocke les utilisateurs
+  //On a deja codé les service getLocataire, getProprietaire, et getAdmin
   private proprietaires = [
     {
-      nom:'proprietaire',
+      email:'proprietaire@gmail.com',
       pwd:'1234',
     
     },
     {
-      nom:'user',
+      email:'user',
       pwd:'1234',
      
     }
   ]
   private admins = [
     {
-      nom:'admin',
+      email:'admin@gmail.com',
       pwd:'1234',
     
     },
     {
-      nom:'ADMIN',
+      email:'ADMIN',
       pwd:'1234',
      
     }
   ]
   private locataires = [
     {
-      nom:'alain@gmail.com',
+      email:'alain@gmail.com',
       pwd:'1234',
     
     },
     {
-      nom:'LOCATAIRE',
+      email:'locataire@gmail.com',
       pwd:'1234',
      
     }
@@ -48,11 +49,11 @@ export class AuthentificationService {
   constructor() { }
 
   //Admin
-  public connexionAdmin(nom:string, pwd:string)
+  public connexionAdmin(email:string, pwd:string)
   {
     let admin;
     this.admins.forEach(a => {
-      if(a.nom == nom && a.pwd == pwd)
+      if(a.email == email && a.pwd == pwd)
       {admin = a}
       
     });
@@ -69,11 +70,11 @@ export class AuthentificationService {
     }
   }
   //Locataire
-  public connexionLocataire(nom:string, pwd:string)
+  public connexionLocataire(email:string, pwd:string)
   {
     let locataire;
     this.locataires.forEach(l => {
-      if(l.nom == nom && l.pwd == pwd)
+      if(l.email == email && l.pwd == pwd)
       {locataire = l}
       
     });
@@ -91,11 +92,11 @@ export class AuthentificationService {
   }
 
   //Proprietaire
-  public connexionProprietaire(nom:string, pwd:string)
+  public connexionProprietaire(email:string, pwd:string)
   {
     let proprietaire;
     this.proprietaires.forEach(u => {
-      if(u.nom == nom && u.pwd == pwd)
+      if(u.email == email && u.pwd == pwd)
       {proprietaire = u}
       
     });
@@ -111,13 +112,6 @@ export class AuthentificationService {
 
     }
   }
- // public isAdmin()
-//{
- // if(this.isAuthentificated)
- /// {
-   // return true;
-  //}
- // return false;
-//}
+ 
 
 }

@@ -19,6 +19,7 @@ export class ListProprietaireComponent implements OnInit {
   public getProprietaire()
   {
     this.service.getListProprietaire().subscribe(data=>this.proprietaires = data)
+
   }
   public deleteProprietaire(email:string) {
     this.service.deleteProprietaire(email)
